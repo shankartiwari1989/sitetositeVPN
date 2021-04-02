@@ -26,6 +26,7 @@ conn Tunnel1
         keylife=1h
         phase2alg=aes128-sha1;modp1024
         ike=aes128-sha1;modp1024
+        auth=esp                              [REMOVE THIS LINE ]
         keyingtries=%forever
         keyexchange=ike
         leftsubnet=[Customer end VPN CIDR]
