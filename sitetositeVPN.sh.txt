@@ -19,7 +19,7 @@ conn Tunnel1
         authby=secret
         auto=start
         left=%defaultroute
-        leftid=Customer end Gateway VPN public IP [REMOVE EVERY THING AFTER EQUAL SIGN AND PUT CUSTOMER GATEWAY IP ADDRESS FROM DOWNLOADED CONFIGRATION FILE] 
+        leftid=Customer end Gateway VPN public IP [REMOVE EVERY THING AFTER EQUAL SIGN AND PUT CUSTOMER GATEWAY IP ADDRESS FROM DOWNLOADED CONFIGRATION FILE] outside IP add honi chahiye
         right=AWS Virtual private gateway ID- public IP [REMOVE EVERY THING AFTER EQUAL SIGN AND PUT VIRTUAL PRIVATE GATEWAY IP ADDRESS FROM DOWNLOADED CONFIGRATION FILE]
         type=tunnel
         ikelifetime=8h
