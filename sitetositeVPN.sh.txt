@@ -19,8 +19,8 @@ conn Tunnel1
         authby=secret
         auto=start
         left=%defaultroute
-        leftid=Customer end Gateway VPN public IP
-        right=AWS Virtual private gateway ID- public IP
+        leftid=Customer end Gateway VPN public IP [REMOVE EVERY THING AFTER EQUAL SIGN AND PUT CUSTOMER GATEWAY IP ADDRESS FROM DOWNLOADED CONFIGRATION FILE] 
+        right=AWS Virtual private gateway ID- public IP [REMOVE EVERY THING AFTER EQUAL SIGN AND PUT VIRTUAL PRIVATE GATEWAY IP ADDRESS FROM DOWNLOADED CONFIGRATION FILE]
         type=tunnel
         ikelifetime=8h
         keylife=1h
@@ -28,14 +28,14 @@ conn Tunnel1
         ike=aes128-sha1;modp1024
         keyingtries=%forever
         keyexchange=ike
-        leftsubnet=Customer end VPN CIDR
-        rightsubnet=AWS end VPN CIDR
+        leftsubnet=[Customer end VPN CIDR]
+        rightsubnet=[AWS end VPN CIDR]
         dpddelay=10
         dpdtimeout=30
         dpdaction=restart_by_peer
 
 3. Contents for  /etc/ipsec.d/aws-vpn.secrets
-customer_public_ip aws_vgw_public_ip: PSK "shared secret"
+customer_public_ip aws_vgw_public_ip: Pre Share Key "shared secret"(PUT CUSTOMER GATEWAY AND VIRTUAL PRIVATE GATEWAY AND PRE SHARED KEY, from downloaded config file)
 
 4. Commands to enable/start ipsec service
            $ chkconfig ipsec on
